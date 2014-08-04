@@ -1,0 +1,16 @@
+# Virtual box #
+###############
+
+.vagrant
+composer.phar
+vendor/*
+
+# Config files #
+################
+
+gain12/config/config.php
+
+# IDE files #
+#############
+
+.idea
