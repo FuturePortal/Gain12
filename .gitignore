@@ -1,0 +1,17 @@
+# Virtual box #
+###############
+
+.vagrant
+composer.phar
+vendor/*
+puphpet/files/dot/ssh/*
+
+# Config files #
+################
+
+gain12/config/config.php
+
+# IDE files #
+#############
+
+.idea
