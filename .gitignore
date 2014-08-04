@@ -4,6 +4,7 @@
 .vagrant
 composer.phar
 vendor/*
+puphpet/files/dot/ssh/*
 
 # Config files #
 ################

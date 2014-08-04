@@ -1,5 +1,14 @@
 #!/bin/bash
 
-echo '====================================='
+echo '========================================================'
 echo 'Install Gain12'
-echo '====================================='
+echo '========================================================'
+
+cd /vagrant
+
+echo 'Downloading composer'
+curl -sS https://getcomposer.org/installer | php
+
+echo 'Removing unwanted folders'
+rm -rf html
+rm -rf default

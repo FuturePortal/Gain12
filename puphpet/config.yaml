@@ -87,7 +87,7 @@ apache:
     vhosts:
         FQ44J5Qk3GgY:
             servername: dev.gain12.com
-            docroot: /var/www/gain12/public
+            docroot: /var/www/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
