@@ -25,6 +25,10 @@ This will make sure the database, composer and other modules get updated.
 
 # Development
 
+### Content styling using SASS/SCSS
+
+Gain12 uses SASS. To rebuild the css file run: `sass gain12/template/main.scss public/main.css`.
+
 ### Code standards
 
 All Pull Requests should follow the
