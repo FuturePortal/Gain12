@@ -15,3 +15,6 @@ php composer.phar install --dev
 
 echo 'Updating database'
 php gain12/database/update.php
+
+echo 'Update CSS using SASS'
+sass gain12/template/main.scss public/main.css

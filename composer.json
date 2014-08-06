@@ -8,6 +8,8 @@
             "gain12\\": "gain12/"
         }
     },
+    "require": {
+    },
     "require-dev": {
     }
 }

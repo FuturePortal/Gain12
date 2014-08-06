@@ -2,6 +2,7 @@
 ###############
 
 .vagrant
+.sass-cache
 composer.phar
 vendor/*
 puphpet/files/dot/ssh/*
@@ -10,6 +11,11 @@ puphpet/files/dot/ssh/*
 ################
 
 gain12/config/config.php
+
+# Generated files #
+###################
+
+public/main.css
 
 # IDE files #
 #############
