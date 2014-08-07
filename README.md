@@ -16,7 +16,7 @@ is where you will be pulling updates from).
 1. Run `vagrant up` to install and set up the vagrant box and install gain12.
 1. While vagrant up is running, add `192.168.56.235 dev.gain12.com` to your
 [hosts file](http://en.wikipedia.org/wiki/Hosts_(file)).
-1. When vagrant up is ready running, you're ready to develop!
+1. Once vagrant up is finished, you're ready to develop!
 
 ### Pulling updates
 
@@ -43,13 +43,13 @@ example, decided to make the homepage responsive, your branch should be called `
 
 ### Database
 
-The database is constructed using the sql files in `gain12/database`. The sql file format should be
-`YYMMDDHHMM-what-changed.sql`. This makes sure the database is patched in the right order.
+The database is constructed using the sql files in `gain12/database/`. The sql file format should be
+`YYMMDDHHMM-what-changed.sql`. This makes sure the database is patched in the right order. To update the database with your new sql file, run `dev/database-update.sh`. Note that this file will only run once. If you want to re-run the file, remove it from the `dbupdate` table.
 
 ### Composer
 
-Added a new library to composer? Make sure you run `php composer.phar update`. This will update the projects
-dependencies in the `composer.lock`.
+Added a new library to composer? Make sure you run `dev/composer-update.sh`. This will update the projects
+dependencies in the `composer.lock` file.
 
 # Pull requests
 
