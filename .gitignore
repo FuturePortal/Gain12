@@ -2,14 +2,21 @@
 ###############
 
 .vagrant
+.sass-cache
 composer.phar
 vendor/*
 puphpet/files/dot/ssh/*
+node_modules/*
 
 # Config files #
 ################
 
 gain12/config/config.php
+
+# Generated files #
+###################
+
+public/css/main.css
 
 # IDE files #
 #############

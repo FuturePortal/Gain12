@@ -1,0 +1,15 @@
+#menu {
+  background: $red;
+
+  ul {
+    list-style: none;
+
+    li {
+      float: left;
+
+      a {
+        background: $green;
+      }
+    }
+  }
+}

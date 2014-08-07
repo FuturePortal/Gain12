@@ -157,6 +157,18 @@ drush:
     install: 0
     settings:
         drush.tag_branch: 6.x
+nodejs:
+    version:
+        - 'latest'
+    global_packages:
+        grunt-cli: 'present'
+    local_packages:
+        grunt: '~0.4.0'
+        grunt-contrib-sass: '~0.7.0'
+        grunt-contrib-watch: '*'
+        grunt-contrib-cssmin: '*'
+        grunt-contrib-concat: '*'
+        grunt-remove: '*'
 mysql:
     install: '1'
     root_password: vagrant

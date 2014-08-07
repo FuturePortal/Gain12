@@ -1,0 +1,15 @@
+{
+    "name": "FuturePortal/Gain12",
+    "description": "Gain12 is a motivating website to help you track your life changing challenges.",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "gain12\\": "gain12/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+    }
+}
