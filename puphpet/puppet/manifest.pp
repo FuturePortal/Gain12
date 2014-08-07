@@ -1717,3 +1717,8 @@ if count($nodejs_values['local_packages']) > 0 {
     }
   }
 }
+
+package { ['sass']:
+  ensure => 'installed',
+  provider => 'gem',
+}

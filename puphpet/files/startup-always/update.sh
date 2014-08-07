@@ -5,14 +5,9 @@ echo '   Updating Gain12'
 echo '========================================================'
 
 cd /vagrant
-
-echo '-> copy config.php.pub if not yet set'
-yes n | cp -i gain12/config/config.php.pub gain12/config/config.php
-
-echo '--------------------------------------------------------'
 echo '-> Updating composer'
-php composer.phar self-update
-php composer.phar install --dev
+sudo composer self-update
+sudo composer install --dev
 
 echo '--------------------------------------------------------'
 echo '-> Updating database'

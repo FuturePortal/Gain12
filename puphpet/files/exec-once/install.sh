@@ -6,15 +6,12 @@ echo '========================================================'
 
 cd /vagrant
 
-echo '-> Downloading composer'
-curl -sS https://getcomposer.org/installer | php
+echo '-> copy config.php.pub if not yet set'
+yes n | cp -i gain12/config/config.php.pub gain12/config/config.php
 
 echo '--------------------------------------------------------'
 echo '-> Removing unwanted folders'
 rm -rf html
 rm -rf default
-
-# echo '= Install sass/scss ===================================='
-# sudo gem install sass
 
 echo '========================================================'
