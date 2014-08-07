@@ -27,7 +27,8 @@ This will make sure the database, composer and other modules get updated.
 
 ### Content styling using SASS/SCSS
 
-Gain12 uses SASS. To rebuild the css file run: `sass gain12/template/main.scss public/main.css`.
+Gain12 uses SASS. This is managed using Grunt. To rebuild the css file, run: `dev/build-css-js.sh`. Or you can let
+Grunt watch for changes in your scss files running `dev/watch-css-js-changes.sh`.
 
 ### Code standards
 
