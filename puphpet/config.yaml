@@ -168,6 +168,7 @@ nodejs:
         grunt-contrib-watch: '*'
         grunt-contrib-cssmin: '*'
         grunt-contrib-concat: '*'
+        grunt-remove: '*'
 mysql:
     install: '1'
     root_password: vagrant

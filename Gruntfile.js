@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         sass: {
-            public: {
+            main: {
                 files: {
                     'public/css/main.css': 'gain12/template/main.scss'
                 }
@@ -27,6 +27,20 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['default']
             }
+        },
+        concat: {
+            main: {
+                src: [
+                    'gain12/template/base.scss',
+                    'gain12/component/**/*.scss'
+                ],
+                dest: 'gain12/template/main.scss'
+            }
+        },
+        remove: {
+            main: {
+                fileList: ['gain12/template/main.scss']
+            }
         }
     });
 
@@ -34,9 +48,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-remove');
 
     // Tasks
-    grunt.registerTask('default', ['sass', 'cssmin']);
-    grunt.registerTask('clean-css', ['sass']);
+    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'remove']);
+    grunt.registerTask('clean-css', ['concat', 'sass', 'remove']);
     grunt.registerTask('watch-files', ['default', 'watch']);
 };
