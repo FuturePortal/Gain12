@@ -1693,3 +1693,27 @@ if hash_key_equals($rabbitmq_values, 'install', 1) {
   }
 }
 
+# Begin nodejs
+
+if $nodejs_values == undef {
+  $nodejs_values = hiera('nodejs', false)
+}
+
+if count($nodejs_values['version']) > 0 {
+  class { 'nodejs': version => $nodejs_values['version'], manage_repo => true }
+}
+
+if count($nodejs_values['global_packages']) > 0 {
+  each( $nodejs_values['global_packages'] ) |$package, $version| {
+    package { $package: provider => npm, ensure => $version, require => Class['nodejs'] }
+  }
+}
+
+if count($nodejs_values['local_packages']) > 0 {
+  each( $nodejs_values['local_packages'] ) |$package, $version| {
+    nodejs::npm { "/var/www:${package}":
+      ensure => present,
+      version => $version
+    }
+  }
+}

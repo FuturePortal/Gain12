@@ -6,6 +6,7 @@
 composer.phar
 vendor/*
 puphpet/files/dot/ssh/*
+node_modules/*
 
 # Config files #
 ################

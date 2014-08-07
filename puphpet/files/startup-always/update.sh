@@ -1,20 +1,43 @@
 #!/bin/bash
 
 echo '========================================================'
-echo 'Updating Gain12'
+echo '   Updating Gain12'
 echo '========================================================'
 
 cd /vagrant
 
-echo 'Making sure the config file is ready to rumble'
+echo '-> copy config.php.pub if not yet set'
 yes n | cp -i gain12/config/config.php.pub gain12/config/config.php
 
-echo 'Updating composer'
+echo '--------------------------------------------------------'
+echo '-> Updating composer'
 php composer.phar self-update
 php composer.phar install --dev
 
-echo 'Updating database'
+echo '--------------------------------------------------------'
+echo '-> Updating database'
 php gain12/database/update.php
 
-echo 'Update CSS using SASS'
-sass gain12/template/main.scss public/main.css
+echo '--------------------------------------------------------'
+echo '-> Building CSS/JS'
+grunt
+
+echo '========================================================'
+echo '-> Gain12'
+echo '                    `.-::://:::-.`'
+echo '                 `-/++/:------:/++/-`'
+echo '               .:+/:.`          `.:++:`'
+echo '              :++-`      `--`      `:++-'
+echo '             :+/.      `:++++:`      ./+:'
+echo '            -++.     `:++/++/++:`     .++-'
+echo '            /+:      -:-`.++.`::.      /+/'
+echo '           `++-          .++.          :++'
+echo '            /+:          .++.          /+/'
+echo '            -++.         .++.         .++-'
+echo '             :+/.        .++.        ./+:'
+echo '              :++:`      .++.      `:++-'
+echo '               .:+/:.`   .++.   `.:++:`'
+echo '                 `-/++/:-:++:::/++/-`'
+echo '                    `.-::://::--.`'
+echo ' '
+echo '========================================================'
