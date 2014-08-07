@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vagrant ssh -c "cd /vagrant; grunt watch"
+vagrant ssh -c "cd /vagrant; grunt watch-files"
