@@ -6,7 +6,7 @@ can be found at http://gain12.com.
 ### Setup
 
 1. Make sure you have downloaded/installed [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and
-[Vagrant](http://www.vagrantup.com/downloads).
+[Vagrant](http://www.vagrantup.com/downloads) (>1.6.2).
 1. Create a folder on you PC where you want to install the project files.
 1. Open your command line interface (CLI) and navigate to your new folder.
 1. Fork the project and `git clone git@github.com:`**your_username**`/Gain12.git gain12-web` to your computer.
@@ -15,7 +15,7 @@ can be found at http://gain12.com.
 is where you will be pulling updates from).
 1. Run `vagrant up` to install and set up the vagrant box and install gain12.
 1. While vagrant up is running, add `192.168.56.235 dev.gain12.com` to your
-[hosts file](http://en.wikipedia.org/wiki/Hosts_(file)).
+[hosts file](http://en.wikipedia.org/wiki/Hosts_(file)). (linux/iOS: `sudo -- sh -c 'echo "\n# Gain12 website\n192.168.56.235 dev.gain12.com" >> /etc/hosts'`)
 1. Once vagrant up is finished, you're ready to develop!
 
 ### Pulling updates
