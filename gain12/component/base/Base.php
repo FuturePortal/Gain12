@@ -19,7 +19,8 @@ class Base extends \gain12\component\Component
         return $this->render(
             __DIR__ . '/base.phtml',
             [
-                'page' => $this->page
+                'title' => $this->page->getTitle(),
+                'content' => $this->page->getContent()
             ]
         );
     }
