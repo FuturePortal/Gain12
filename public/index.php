@@ -1,5 +1,8 @@
 <?php
 
+// Record runtime
+$startTime = strtotime('now') + microtime();
+
 // Set document root
 chdir(dirname(__DIR__));
 
@@ -8,12 +11,26 @@ require 'vendor/autoload.php';
 require 'gain12/config/config.php';
 require 'gain12/core/init.php';
 
+// Set page globals
+global $page;
+
 // Load the wanted page
 switch (empty($_GET['page']) ? 'home' : $_GET['page']) {
     case 'home':
-        echo 'Homepage!';
+        $page = new gain12\page\Home;
         break;
     default:
-        echo 'Oh noes, 404!';
+        $page = new gain12\page\NotFound;
         break;
 }
+
+// Process all page specifics
+$base = new gain12\component\base\Base;
+$base->setPage($page);
+echo $base;
+
+// Show generation time
+echo '
+    <p>Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms</p>
+</body>
+</html>';

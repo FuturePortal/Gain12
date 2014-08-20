@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         sass: {
             main: {
                 files: {
-                    'public/css/main.css': 'gain12/template/main.scss'
+                    'public/css/main.css': 'gain12/component/base/main.scss'
                 }
             }
         },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     'gain12/component/**/*.scss',
-                    'gain12/template/*.scss'
+                    '!gain12/component/base/main.scss'
                 ],
                 tasks: ['default']
             }
@@ -31,15 +31,14 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
-                    'gain12/template/base.scss',
-                    'gain12/component/**/*.scss'
+                    'gain12/component/*/*.scss'
                 ],
-                dest: 'gain12/template/main.scss'
+                dest: 'gain12/component/base/main.scss'
             }
         },
         remove: {
             main: {
-                fileList: ['gain12/template/main.scss']
+                fileList: ['gain12/component/base/main.scss']
             }
         }
     });
