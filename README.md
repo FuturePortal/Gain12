@@ -1,4 +1,4 @@
-# Gain12
+# Gain12 ![Build status](https://api.travis-ci.org/FuturePortal/Gain12.svg)
 
 Gain12 is a motivating website to help you track your life changing challenges. Excited? So are we! More information
 can be found at http://gain12.com.
