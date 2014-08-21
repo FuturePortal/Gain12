@@ -21,4 +21,4 @@ class Renderer {
         // Return grabbed content
         return $content;
     }
-} 
+}
