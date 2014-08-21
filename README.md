@@ -23,6 +23,10 @@ is where you will be pulling updates from).
 After you pull new commits into your project using `git pull upstream develop`, you want to run `vagrant reload`.
 This will make sure the database, composer and other modules get updated.
 
+# Copyright
+
+This project does not hold an open source licence, therefor, the standard copyright laws apply. However, please feel free to fork the project and submit changes in a pull request to this project.
+
 # Development
 
 ### Content styling using SASS/SCSS
