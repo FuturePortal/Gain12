@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,IAAK;EACH,UAAU,ECHJ,IAAI",
-"sources": ["../../gain12/component/base/main.scss","../../gain12/component/base/partials/variables.scss"],
-"names": [],
-"file": "main.css"
-}
