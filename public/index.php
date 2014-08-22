@@ -15,7 +15,7 @@ require 'gain12/core/init.php';
 global $page;
 
 // Load the wanted page
-switch(empty($_GET['page']) ? 'home' : $_GET['page']) {
+switch(empty($_GET['page']) ? 'home' : $_GET['page']){
     case 'home':
         $page = new gain12\page\Home;
         break;
