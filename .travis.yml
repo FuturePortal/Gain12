@@ -13,6 +13,6 @@ script:
   - phpcs -n --standard=PSR2 --extensions=php --ignore=vendor/* *
 
 notifications:
+  email: false
   webhooks:
-    urls:
-      - http://t888.futureportal.com/
+    - http://t888.futureportal.com/
