@@ -15,4 +15,8 @@ script:
 notifications:
   email: false
   webhooks:
-    - http://t888.futureportal.com/
+    urls:
+      - http://t888.futureportal.com/
+    on_success: always
+    on_failure: always
+    on_start: true
