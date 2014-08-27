@@ -1,5 +1,11 @@
 @import 'partials/bootstrap';
 
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: 0px;
+}
+
 body {
   background: $white;
 }

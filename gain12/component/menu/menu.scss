@@ -1,0 +1,33 @@
+$menu-height: 80px;
+$logo-height: 40px;
+
+#menu-overlay {
+    position: fixed;
+    z-index: 1020;
+    height: $menu-height;
+    width: 100%;
+
+    .logo {
+        position: absolute;
+        top: ($menu-height - $logo-height) / 2;
+        left: 20px;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+#menu-spacer {
+    height: $menu-height;
+    display: none;
+}
+
+#menu-background {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: $blue;
+    height: $menu-height;
+}
