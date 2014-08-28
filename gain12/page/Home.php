@@ -18,8 +18,7 @@ class Home extends Page
         $crap = '';
         for ($i = 0; $i <= 100; $i++) {
             switch (rand(1, 5)) {
-                case 1: $crap .= 'lol ';
-                    break;
+                case 1: $crap .= 'lol '; break;
                 case 2:
                     $crap .= 'jizzle ';
                     break;
@@ -28,9 +27,7 @@ class Home extends Page
                     break;
                 case 4:
                     $crap .= 'super '; break;
-                case 5:
-                    $crap .= 'powers ';
-                    break;
+                case 5: $crap .= 'powers '; break;
             }
             $crap .= '<br />';
         }
