@@ -31,6 +31,6 @@ echo $base;
 
 // Show generation time
 echo '
-    <p>Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms</p>
+    <!-- Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms -->
 </body>
 </html>';
