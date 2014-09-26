@@ -25,12 +25,12 @@ switch (empty($_GET['page']) ? 'home' : $_GET['page']) {
 }
 
 // Process all page specifics
-$base = new gain12\component\base\Base;
+$base = new gain12\base\Base;
 $base->setPage($page);
 echo $base;
 
-// Show generation time
+// Show generation time @todo: this should not be in paragraph.
 echo '
-    <!-- Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms -->
+    <br /><br /><p>Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms</p>
 </body>
 </html>';

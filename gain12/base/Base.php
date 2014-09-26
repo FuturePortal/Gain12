@@ -1,6 +1,6 @@
 <?php
 
-namespace gain12\component\base;
+namespace gain12\base;
 
 class Base extends \gain12\component\Component
 {

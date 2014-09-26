@@ -1,5 +1,5 @@
 <div id="menu">
-    <a href="./" class="logo"><img src="./images/logo/logo-full-white.svg" alt="Gain12" /></a>
+    <a href="./" class="logo"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>" /></a>
     <div class="menu-btn">
         <div class="menu-icon"><span></span></div>
     </div>
@@ -8,46 +8,56 @@
 <div id="menu-spacer"></div>
 <div id="menu-sidebar">
     <nav>
+        <?php
+            if (count($topLinks)):
+        ?>
         <ul class="top-links">
+            <?php
+                foreach ($topLinks as $topLink):
+            ?>
             <li>
-                <a href="./"><i class="fa fa-caret-right"></i> Homepage</a>
+                <a href="<?= $topLink['url'] ?>"><i class="fa fa-caret-right"></i> <?= $topLink['title'] ?></a>
             </li>
-            <li>
-                <a href="./"><i class="fa fa-caret-right"></i> Homepage</a>
-            </li>
-            <li>
-                <a href="./"><i class="fa fa-caret-right"></i> Homepage</a>
-            </li>
-            <li>
-                <a href="./"><i class="fa fa-caret-right"></i> Homepage</a>
-            </li>
-            <li>
-                <a href="./"><i class="fa fa-caret-right"></i> Homepage</a>
-            </li>
+            <?php
+                endforeach;
+            ?>
             <div class="clear"></div>
         </ul>
+        <?php
+            endif;
+            if (count($mainLinks)):
+        ?>
         <ul class="main-links">
+            <?php
+                foreach ($mainLinks as $mainLink):
+            ?>
             <li>
-                <a href="./">Homepage</a>
+                <a href="<?= $mainLink['url'] ?>"><?= $mainLink['title'] ?></a>
             </li>
-            <li>
-                <a href="./">Homepage</a>
-            </li>
-            <li>
-                <a href="./">Homepage</a>
-            </li>
-            <li>
-                <a href="./">Homepage</a>
-            </li>
-            <li>
-                <a href="./">Homepage</a>
-            </li>
+            <?php
+                endforeach;
+            ?>
         </ul>
+        <?php
+            endif;
+        ?>
     </nav>
     <div class="bottom">
-        <a href="https://twitter.com/Gain12app" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://facebook.com/Gain12app" class="facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
-        <a href="https://github.com/FuturePortal/Gain12" class="github" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://github.com/FuturePortal" class="copy" target="_blank">FuturePortal <i class="fa fa-copyright"></i> <?= date('Y') ?></a>
+        <?php
+            if (count($iconLinks)):
+        ?>
+        <div class="icon-links">
+            <?php
+                foreach ($iconLinks as $iconLink):
+            ?>
+            <a href="<?= $iconLink['url'] ?>" class="icon-link" target="_blank"><?= $iconLink['title'] ?></a>
+            <?php
+                endforeach;
+            ?>
+        </div>
+        <?php
+            endif;
+        ?>
+        <a href="<?= $credits['url'] ?>" class="copy" target="_blank"><?= $credits['credit'] ?></a>
     </div>
 </div>
