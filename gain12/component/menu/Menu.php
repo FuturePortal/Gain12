@@ -7,6 +7,7 @@ class Menu extends \gain12\component\Component
     protected $mainLinks = [];
     protected $topLinks = [];
     protected $iconLinks = [];
+    protected $directLinks = [];
     protected $credits = [];
     protected $logo = [];
 
@@ -29,6 +30,9 @@ class Menu extends \gain12\component\Component
             case 'main':
                 $this->mainLinks[] = $link;
                 break;
+            case 'direct':
+                $this->directLinks[] = $link;
+                break;
             case 'top':
                 $this->topLinks[] = $link;
                 break;
@@ -38,6 +42,12 @@ class Menu extends \gain12\component\Component
             default:
                 throw new \Exception('"' . $type . '" is not a valid link type.');
         }
+        return $this;
+    }
+
+    public function addDirectLink($title, $url)
+    {
+        $this->addLink($title, $url, 'direct');
         return $this;
     }
 
@@ -69,6 +79,7 @@ class Menu extends \gain12\component\Component
             [
                 'topLinks' => $this->topLinks,
                 'mainLinks' => $this->mainLinks,
+                'directLinks' => $this->directLinks,
                 'iconLinks' => $this->iconLinks,
                 'credits' => $this->credits,
                 'logo' => $this->logo,

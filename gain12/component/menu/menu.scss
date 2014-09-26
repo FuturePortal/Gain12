@@ -16,6 +16,23 @@ $logo-height: 40px;
         }
     }
 
+    .direct-links {
+        position: absolute;
+        overflow: hidden;
+        top: 30px;
+        height: 25px;
+        left: 160px;
+        right: 60px;
+        text-align: right;
+
+        a {
+            font-size: 20px;
+            padding-right: 40px;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
     .menu-btn {
         position: absolute;
         width: 80px;

@@ -1,5 +1,20 @@
 <div id="menu">
     <a href="./" class="logo"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>" /></a>
+    <?php
+    if (count($directLinks)):
+        ?>
+        <div class="direct-links">
+            <?php
+            foreach ($directLinks as $directLink):
+                ?>
+                <a href="<?= $directLink['url'] ?>"><?= $directLink['title'] ?></a>
+            <?php
+            endforeach;
+            ?>
+        </div>
+    <?php
+    endif;
+    ?>
     <div class="menu-btn">
         <div class="menu-icon"><span></span></div>
     </div>
