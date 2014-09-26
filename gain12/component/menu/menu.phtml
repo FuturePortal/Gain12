@@ -1,0 +1,78 @@
+<div id="menu">
+    <a href="./" class="logo"><img src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>" /></a>
+    <?php
+    if (count($directLinks)):
+        ?>
+        <div class="direct-links">
+            <?php
+            foreach ($directLinks as $directLink):
+                ?>
+                <a href="<?= $directLink['url'] ?>"><?= $directLink['title'] ?></a>
+            <?php
+            endforeach;
+            ?>
+        </div>
+    <?php
+    endif;
+    ?>
+    <div class="menu-btn">
+        <div class="menu-icon"><span></span></div>
+    </div>
+</div>
+<div id="menu-background"></div>
+<div id="menu-spacer"></div>
+<div id="menu-sidebar">
+    <nav>
+        <?php
+            if (count($topLinks)):
+        ?>
+        <ul class="top-links">
+            <?php
+                foreach ($topLinks as $topLink):
+            ?>
+            <li>
+                <a href="<?= $topLink['url'] ?>"><i class="fa fa-caret-right"></i> <?= $topLink['title'] ?></a>
+            </li>
+            <?php
+                endforeach;
+            ?>
+            <div class="clear"></div>
+        </ul>
+        <?php
+            endif;
+            if (count($mainLinks)):
+        ?>
+        <ul class="main-links">
+            <?php
+                foreach ($mainLinks as $mainLink):
+            ?>
+            <li>
+                <a href="<?= $mainLink['url'] ?>"><?= $mainLink['title'] ?></a>
+            </li>
+            <?php
+                endforeach;
+            ?>
+        </ul>
+        <?php
+            endif;
+        ?>
+    </nav>
+    <div class="bottom">
+        <?php
+            if (count($iconLinks)):
+        ?>
+        <div class="icon-links">
+            <?php
+                foreach ($iconLinks as $iconLink):
+            ?>
+            <a href="<?= $iconLink['url'] ?>" class="icon-link" target="_blank"><?= $iconLink['title'] ?></a>
+            <?php
+                endforeach;
+            ?>
+        </div>
+        <?php
+            endif;
+        ?>
+        <a href="<?= $credits['url'] ?>" class="copy" target="_blank"><?= $credits['credit'] ?></a>
+    </div>
+</div>

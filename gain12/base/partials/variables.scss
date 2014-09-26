@@ -1,0 +1,14 @@
+$white: #fff;
+$whiteDark: #ddd;
+$whiteDarker: #bbb;
+
+$black: #000;
+
+$darkest: #222;
+$dark: #333;
+
+$blue: #0f578a;
+$blueDark: darken($blue, 5%);
+$blueDarker: darken($blue, 10%);
+$blueLight: lighten($blue, 5%);
+$blueLighter: lighten($blue, 10%);

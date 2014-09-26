@@ -1,6 +1,6 @@
 <?php
 
-namespace gain12\component\base;
+namespace gain12\base;
 
 class Base extends \gain12\component\Component
 {
@@ -20,7 +20,8 @@ class Base extends \gain12\component\Component
             __DIR__ . '/base.phtml',
             [
                 'title' => $this->page->getTitle(),
-                'content' => $this->page->getContent()
+                'content' => $this->page->getContent(),
+                'siteUrl' => 'http://' . $_SERVER['SERVER_NAME'] . '/'
             ]
         );
     }

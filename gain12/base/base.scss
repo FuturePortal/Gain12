@@ -1,0 +1,31 @@
+@import 'partials/bootstrap';
+
+@font-face{
+    font-family: 'BPreplayExtended';
+    src: url('../fonts/BPreplayExtended_ik.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BPreplayExtended';
+    src: url('../fonts/BPreplayExtendedBold_ik.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    outline: 0px;
+}
+
+body {
+    background: $white;
+    font-family: 'BPreplayExtended';
+    font-size: 14px;
+}
+
+.clear {
+    clear: both;
+}

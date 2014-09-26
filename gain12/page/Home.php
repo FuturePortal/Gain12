@@ -6,7 +6,11 @@ class Home extends Page
 {
     public function __construct()
     {
-        # Test this setup
-        $this->addComponent('<h1>Homepage</h1>');
+        # Menu
+        $this->addCoreComponent('menu');
+
+        # Header
+        $header = new \gain12\component\headerMedium\HeaderMedium;
+        $this->addComponent($header);
     }
 }

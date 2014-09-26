@@ -36,6 +36,11 @@ class Page
         return $this;
     }
 
+    protected function addCoreComponent($name)
+    {
+        $this->addComponent(require 'gain12/core/' . $name . '.php');
+    }
+
     protected function addComponent($component)
     {
         $this->components[] = $component;
