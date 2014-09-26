@@ -11,8 +11,8 @@ $menu->setCredits(
     'https://github.com/FuturePortal'
 );
 
-$menu->addIconLink('<i class="fa fa-twitter"></i>', 'https://twitter.com/Gain12app');
-$menu->addIconLink('<i class="fa fa-facebook-square"></i>', 'https://facebook.com/Gain12app');
 $menu->addIconLink('<i class="fa fa-github"></i>', 'https://github.com/FuturePortal/Gain12');
+$menu->addIconLink('<i class="fa fa-facebook-square"></i>', 'https://facebook.com/Gain12app');
+$menu->addIconLink('<i class="fa fa-twitter"></i>', 'https://twitter.com/Gain12app');
 
 return $menu;

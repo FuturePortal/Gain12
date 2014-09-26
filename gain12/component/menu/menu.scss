@@ -184,9 +184,15 @@ $max-side-menu-width: 320px;
         background: $blueDark;
         border-top: 1px solid $blueDarker;
 
-        .twitter, .facebook, .github {
+        .icon-links {
             position: absolute;
-            top: 0;
+            right: 0px;
+            top: 0px;
+            height: 40px;
+        }
+
+        .icon-link {
+            float: left;
             color: $white;
             padding: 10px;
             height: 20px;
@@ -198,16 +204,6 @@ $max-side-menu-width: 320px;
             &:hover {
                 background: $blueDarker;
             }
-        }
-
-        .twitter {
-            right: 0;
-        }
-        .facebook {
-            right: 40px;
-        }
-        .github {
-            right: 80px;
         }
 
         .copy {
