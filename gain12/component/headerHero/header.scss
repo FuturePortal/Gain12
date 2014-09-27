@@ -1,0 +1,58 @@
+.hero-header {
+    position: relative;
+    z-index: 1001;
+    background: $blue;
+    height: 800px;
+    overflow: hidden;
+
+    .bg-video {
+        position: absolute;
+        z-index: 100;
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: 120;
+        background: transparentize($blue, 0.2);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+
+        .scroller {
+            position: absolute;
+            bottom: 10px;
+            color: $white;
+            text-align: center;
+            width: 100%;
+        }
+
+        .gainer {
+            position: absolute;
+            top: 50%;
+            height: 120px;
+            margin-top: -60px;
+            width: 100%;
+            color: $white;
+
+            .top {
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            #characteristic {
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .bottom {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+}

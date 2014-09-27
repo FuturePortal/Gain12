@@ -29,6 +29,11 @@ $base = new gain12\base\Base;
 $base->setPage($page);
 echo $base;
 
+// @todo: Remove temporary test content
+for ($i = 0; $i <= 100; $i++) {
+    echo '<p>Testing</p>';
+}
+
 // Show generation time @todo: this should not be in paragraph.
 echo '
     <br /><br /><p>Page generated in ' . number_format((((strtotime('now') + microtime()) - $startTime) * 1000), 0, '.', ',') . 'ms</p>
