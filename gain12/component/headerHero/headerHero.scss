@@ -13,6 +13,7 @@
     .bg-gif {
         background: url('../images/giphy.gif');
         background-size: cover;
+        background-position: center center;
         position: absolute;
         z-index: 100;
         top: 0;
@@ -68,4 +69,15 @@
             }
         }
     }
+}
+
+#header-inner-wrap {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
 }
