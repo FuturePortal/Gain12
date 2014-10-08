@@ -18,6 +18,7 @@ gain12/config/config.php
 
 public/css/main.css
 public/css/main.css.map
+public/js/core.js
 
 # IDE files #
 #############

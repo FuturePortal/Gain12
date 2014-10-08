@@ -10,6 +10,19 @@
         z-index: 100;
     }
 
+    .bg-gif {
+        background: url('../images/giphy.gif');
+        background-size: cover;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+
     .overlay {
         position: absolute;
         z-index: 120;

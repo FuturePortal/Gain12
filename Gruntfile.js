@@ -23,7 +23,9 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     'gain12/component/**/*.scss',
-                    '!gain12/base/main.scss'
+                    'gain12/base/base.scss',
+                    'gain12/base/core.js',
+                    'gain12/component/*/*.js'
                 ],
                 tasks: ['default']
             }
@@ -35,6 +37,13 @@ module.exports = function(grunt) {
                     'gain12/component/*/*.scss'
                 ],
                 dest: 'gain12/base/main.scss'
+            },
+            coreJs: {
+                src: [
+                    'gain12/base/core.js',
+                    'gain12/component/*/*.js'
+                ],
+                dest: 'public/js/core.js'
             }
         },
         remove: {
