@@ -1,4 +1,14 @@
 /**
+ * A list of characteristics you can gain with Gain12
+ * @type {string[]}
+ */
+var characteristics = [
+    'Confidence', 'Shape', 'Health', 'Discipline',
+    'Genuine happiness', 'Strength', 'Resilience', 'Ethic',
+    'Dedication', 'Awareness', 'Persistence', 'Attractiveness'
+];
+
+/**
  * Component base class
  * @constructor
  */
@@ -17,11 +27,7 @@ Component.prototype.init = function () {
 $(document).ready(function(){
    $('.component').each(function(){
        var currentComponent = $(this).attr('data-component');
-       try {
-           var handler = new window[currentComponent]();
-           handler.init();
-       } catch (e) {
-           alert('Unable to load component ' + currentComponent);
-       }
+       var handler = new window[currentComponent]();
+       handler.init();
    });
 });
