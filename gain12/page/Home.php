@@ -10,7 +10,7 @@ class Home extends Page
         $this->addCoreComponent('menu');
 
         # Header
-        $header = new \gain12\component\headerMedium\HeaderMedium;
+        $header = new \gain12\component\headerHero\HeaderHero;
         $this->addComponent($header);
     }
 }
