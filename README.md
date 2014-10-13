@@ -18,6 +18,8 @@ is where you will be pulling updates from).
 [hosts file](http://en.wikipedia.org/wiki/Hosts_(file)). (linux/iOS: `sudo -- sh -c 'echo "\n# Gain12 website\n192.168.56.235 dev.gain12.com" >> /etc/hosts'`)
 1. Once vagrant up is finished, you're ready to develop!
 
+**Summary:** fork, clone, vagrant up, add host, done.
+
 ### Pulling updates
 
 After you pull new commits into your project using `git pull upstream develop`, you want to run `vagrant reload`.
