@@ -22,8 +22,9 @@ HeroHeader.prototype.init = function () {
 
     setInterval(function () {
         HeroHeader.prototype.bounceScrollDown();
-    }, 3000);
+    }, 4500);
 
+    this.nextCharacteristic();
     setInterval(function () {
         HeroHeader.prototype.nextCharacteristic();
     }, 2000);
@@ -31,10 +32,23 @@ HeroHeader.prototype.init = function () {
 
 HeroHeader.prototype.nextCharacteristic = function () {
     if (this.currentCharacteristic == undefined) {
-        this.currentCharacteristic = 0;
+        this.currentCharacteristic = 1;
     }
 
-    $('#characteristic').html(characteristics[this.currentCharacteristic]);
+    var next = characteristics[this.currentCharacteristic];
+    var intro = 'flipInX';
+    var outro = 'flipOutX';
+
+    $('#characteristic')
+        .removeClass(intro)
+        .addClass(outro);
+
+    setTimeout(function () {
+        $('#characteristic')
+            .html(next)
+            .removeClass(outro)
+            .addClass(intro);
+    }, 1000);
 
     this.currentCharacteristic++;
     if (this.currentCharacteristic == characteristics.length) {
