@@ -9,6 +9,7 @@
         }
     },
     "require": {
+        "t-888/build-script": "dev-master"
     },
     "require-dev": {
     }
